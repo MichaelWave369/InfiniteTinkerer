@@ -48,6 +48,8 @@ test('CSV quotes hostile inputs without formulas executing in spreadsheet cells'
  const csv=metricsCsv([{date:'2026-11-02',slot:'Morning',views:100,earnings:1.2,note:'hello, "world"'}]);
  assert.match(csv,/"hello, ""world"""/);
  assert.match(csv,/100/);
+ const formula=metricsCsv([{date:'2026-11-02',slot:'Morning',views:10,earnings:1,note:'=HYPERLINK("https://example.test","click")'}]);
+ assert.match(formula,/"'=HYPERLINK/);
  const cleaned=cleanState({groups:[{url:'javascript:alert(1)'}]});
  assert.equal(cleaned.groups[0].url,'');
 });
