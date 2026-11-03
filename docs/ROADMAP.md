@@ -30,7 +30,22 @@
 - Storyboard the jukebox, payphone, kitchen curly-cord and patch-switchboard as vertical 9:16 micro-scenes.
 - Music synchronized to consented user-supplied track or original licensed assets. Avoid auto-playing media without a gesture.
 
-## Rung 003 · Community discovery and measured distribution
+
+## Rung 003 · Coin Vault + evidence-backed content research (implemented)
+
+- Import **both approved creator coin portraits** once through a two-slot browser-local Coin Vault (classic and Fibonacci/robots); select one for the page and Reel Studio.
+- Images are resized and encoded client-side to save browser storage; import your original local files, which are not shipped in the repository.
+- Download a versioned JSON backup containing 18-piece achievements, draft queue, group notes, earnings timing logs and the local coin images.
+- Restore with schema validation, bounded arrays, safe group URLs and an explicit destructive overwrite confirmation; attempt rollback if storage quota is hit.
+- Export an ordinary CSV of manually entered actual earnings observations, properly quoted.
+- Show qualified-view totals and *observed* earnings per 1,000 qualified views for three time slots, with minimum sample guidance.
+- Suggest only a **least-sampled next test slot**, not a magical best time; the results are observational, not a causal finding.
+- Zero account scraping, automatic group posting, or externally connected services.
+
+**Reminder:** No coin images are bundled into the public repository, to avoid committing personal portrait artwork without an explicit publication decision. Upload the provided original images to the local Coin Vault control once per browser. Backup JSON contains those personal images, so treat it as private.
+
+
+## Rung 003+ · Community discovery and measured distribution
 
 - Import/export local dashboard JSON or CSV so browser clearing does not destroy the user's research.
 - Store per-post content type, group, native-post URL and measured qualified-view data (do not infer from total views).

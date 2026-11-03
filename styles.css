@@ -16,3 +16,22 @@
 .reel-notes{padding:1rem 1.1rem;background:#152b20;border-left:3px solid #dabe76;border-radius:5px;color:#c7e0cc;font-size:.89rem;line-height:1.55}
 .reel-notes strong{color:#f0db9e}
 @media(max-width:800px){.reel-grid{grid-template-columns:1fr}.reel-screen{max-width:360px;width:100%;margin:auto}}
+
+/* Rung 003 · art vault and privacy-first analytics */
+.vault-grid{display:grid;grid-template-columns:minmax(240px,380px) 1fr;gap:1.2rem}
+.vault-preview,.vault-panel,.lab-backup-panel{padding:1.5rem;background:linear-gradient(150deg,#112b1f,#091b14);border:1px solid var(--line);border-radius:16px}
+.vault-preview{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;min-height:330px}
+.vault-preview img{display:block;width:min(100%,320px);height:auto;animation:coin-hover 5s ease-in-out infinite;filter:drop-shadow(0 14px 18px #0009)}
+.vault-preview p{color:var(--gold);font-size:.9rem;font-weight:800;margin:0}
+.vault-panel label{margin-top:1.15rem}
+.vault-panel input[type=file],.backup-actions input[type=file]{display:block;width:100%;margin-top:.6rem;padding:.7rem;background:#081a14;border:1px solid #3c6248;border-radius:8px;max-width:100%}
+.lab-backup-panel{display:grid;grid-template-columns:1.25fr .75fr;gap:1.5rem;margin-top:1.4rem}
+.backup-actions{display:flex;align-items:flex-start;flex-direction:column;gap:.8rem}
+.backup-actions label{width:100%}
+.backup-actions button{max-width:100%}
+.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1rem 0}
+.insight-card{padding:.9rem;border:1px solid #365d43;border-radius:8px;background:#0b2118;display:flex;flex-direction:column;gap:.5rem}
+.insight-card strong{color:var(--gold)}.insight-card span{font-size:.82rem;color:#d6e6d9}.insight-card small{font-size:.77rem;color:#9ef2b6}
+.small-strong{font-weight:700;font-size:.92rem;color:#e1ebdb}
+@media(max-width:900px){.vault-grid,.lab-backup-panel{grid-template-columns:1fr}}
+@media(max-width:550px){.insight-grid{grid-template-columns:1fr}}
