@@ -15,7 +15,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="#top"><img src="./assets/lil-phi-guy.svg" alt="" width="42" height="42"><span><strong>INFINITE<span class="gold">TINKERER</span></strong><small>Φ369 LABS · ENTER THE FIELD</small></span></a>
-    <nav aria-label="Main navigation"><a href="#adventures">Adventures</a><a href="#pieces">Pieces of Phi</a><a href="#content-lab">Content Lab</a></nav>
+    <nav aria-label="Main navigation"><a href="#adventures">Adventures</a><a href="#reel-studio">Reel Studio</a><a href="#pieces">Pieces of Phi</a><a href="#content-lab">Content Lab</a></nav>
   </header>
   <main id="main">
     <section id="top" class="hero">
@@ -62,6 +62,26 @@
       </div>
     </section>
 
+    <section id="reel-studio" class="section wrap">
+      <div class="section-head"><div><p class="eyebrow">01B / THE CAMERA</p><h2>Make Lil' Phi Guy move</h2><p>Preview and export an original eight-second vertical adventure. Your images and songs never leave your browser.</p></div><span class="section-tag">9:16 · 540×960 · 8 SECONDS</span></div>
+      <div class="reel-grid">
+        <div class="reel-screen"><canvas id="reel-canvas" width="540" height="960" role="img" aria-label="Portrait preview of Lil' Phi Guy being inserted into a retro device, then retrieved by the Gen.E-Wrist string.">Your browser does not support canvas.</canvas></div>
+        <div class="reel-panel">
+          <h3>Director's booth</h3><p>Four miniature original scenes. Select a device, optionally swap in either of your portrait coins, and use your own music.</p>
+          <label for="reel-episode">Retro adventure<select id="reel-episode"></select></label>
+          <label for="reel-coin-file">Coin artwork (optional, local PNG/JPG/WebP)<input id="reel-coin-file" type="file" accept="image/png,image/jpeg,image/webp"></label>
+          <label for="reel-song-file">Your original song (optional, local audio)<input id="reel-song-file" type="file" accept="audio/*"></label>
+          <div class="reel-actions">
+            <button class="button primary" type="button" id="reel-preview">▶ PLAY PREVIEW</button>
+            <button class="button secondary" type="button" id="reel-export">↓ EXPORT VIDEO</button>
+            <button class="text-button" type="button" id="reel-reset">Restore default coin</button>
+          </div>
+          <p id="reel-status" class="reel-status" role="status" aria-live="polite">The jukebox awaits. Face value: one repo.</p>
+          <div class="reel-notes"><strong>What gets exported?</strong> A short vertical video rendered on your device. If you choose an original audio file, supported browsers mix it into the recording. Exports depend on browser MediaRecorder support; Chrome/Edge are recommended. This is a stylized animation, not a photorealistic film. Audio and artwork are never uploaded.</div>
+          <p class="fine-print">Use only music and artwork you own or have permission to publish. If your browser lacks video export, you can still preview the scene. Different browsers may output WebM or MP4.</p>
+        </div>
+      </div>
+    </section>
     <section id="pieces" class="section wrap">
       <div class="section-head"><div><p class="eyebrow">02 / THE GAME</p><h2>Pieces of Phi</h2><p>Imagine 3. Build 6. Share 9. Eighteen honest milestones forge one Lil' Phi Guy.</p></div><span class="section-tag">NOT CRYPTO · JUST CREATIVITY</span></div>
       <div class="pieces-grid">
@@ -121,5 +141,6 @@
   </main>
   <footer class="footer"><div><strong>Φ369 LABS</strong><p>Peace Above Drama · Laughter Before Hatred · People Above Profit</p></div><a href="https://github.com/MichaelWave369/InfiniteTinkerer" target="_blank" rel="noopener noreferrer">Fork the ridiculousness ↗</a><span>MIT · OPEN SOURCE · FACE VALUE 1 REPO</span></footer>
   <script type="module" src="./app.js"></script>
+  <script type="module" src="./reel-studio.js"></script>
 </body>
 </html>

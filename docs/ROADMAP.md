@@ -9,7 +9,21 @@
 - Φ Content Lab: original-text draft generator; editable drafts and local queue; vetted Facebook group research notes; manual qualified-view and earnings tracking by time slot.
 - Responsive, keyboard-accessible layout; no build step; Node standard-library tests; MIT license.
 
-## Rung 002 · The real moving quarter
+
+## Rung 002 · Portrait video maker (implemented on this branch)
+
+- 540×960 9:16 Canvas preview with four retro device mini-scenes and a returning green/gold quarter.
+- Same eight-second four-phase story arc for jukebox, payphone, avocado kitchen phone and cosmic switchboard.
+- The Gen.E-Wrist and suspicious string follow the coin through its trip.
+- Local selection of the user's own coin PNG/JPG/WebP; use either previously generated medallion without uploading it to a server.
+- Optional local original song, embedded in the exported clip when browser MediaRecorder and audio mixing are supported.
+- On-device WebM or MP4 export depending on supported codecs; browser feature detection and graceful preview-only fallback.
+- Timeline, coin positioning and encoding-choice unit tests. No dependencies, tracking, sign-in or paid renderer.
+
+**Known limitations:** This produces stylized 2D animations, not photorealistic filmed hands or jukeboxes. Recording uses real-time Canvas capture, so rendering 8 seconds takes approximately 8 seconds. Audio inclusion varies by browser and should be checked before posting. Selected files remain session-only and are not synced; browser-local drafts and milestones from Rung 001 are unaffected.
+
+
+## Rung 002+ · The real moving quarter
 
 - Bring in the two approved portrait-based coin artworks as optimized web images, retaining the original vector placeholder as fallback.
 - Upgrade the stage visuals: looping frame-based animation or Web Animations with deterministic retrieve motion; optional Gen.E-Wrist model/asset reference.
