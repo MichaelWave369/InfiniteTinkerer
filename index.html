@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081711">
+  <meta name="description" content="The Infinite Toking Tinkerer. Meet Lil' Phi Guy, forge Pieces of Phi, play the Infinite Quarter adventures, and build an original content lab.">
+  <meta property="og:title" content="InfiniteTinkerer · Lil' Phi Guy">
+  <meta property="og:description" content="One coin. Infinite possibilities. Face value: 1 REPO.">
+  <link rel="icon" type="image/svg+xml" href="./assets/lil-phi-guy.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <title>InfiniteTinkerer · Φ369 Labs</title>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top"><img src="./assets/lil-phi-guy.svg" alt="" width="42" height="42"><span><strong>INFINITE<span class="gold">TINKERER</span></strong><small>Φ369 LABS · ENTER THE FIELD</small></span></a>
+    <nav aria-label="Main navigation"><a href="#adventures">Adventures</a><a href="#pieces">Pieces of Phi</a><a href="#content-lab">Content Lab</a></nav>
+  </header>
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A strange little universe of curiosity, code &amp; comedy</p>
+        <h1>THE INFINITE<br><em>TOKING</em> TINKERER</h1>
+        <p class="lede">Meet <strong>Lil' Phi Guy</strong>, the quarter with infinite curiosity, a suspicious string, and absolutely no intention of staying spent.</p>
+        <div class="hero-actions"><a class="button primary" href="#adventures">Play the quarter <span aria-hidden="true">↗</span></a><a class="button secondary" href="#pieces">Forge your Phi</a></div>
+        <p class="fine-print">Made for humans who ask “what if?” one too many times. Free and open source.</p>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <img class="hero-coin" src="./assets/lil-phi-guy.svg" alt="Illustrated emerald and gold Lil' Phi Guy medallion, marked as one symbolic repo">
+        <span class="float-note note-top">GEN.E-WRIST CONNECTED</span>
+        <span class="float-note note-bottom">FACE VALUE: 1 REPO</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="The rules of this universe"><span>ONE COIN</span><span aria-hidden="true">✳</span><span>INFINITE POSSIBILITIES</span><span aria-hidden="true">✳</span><span>FEATURE, NOT A BUG</span><span aria-hidden="true">✳</span><span>IN CODE WE TRUST</span></section>
+
+    <section id="adventures" class="section wrap">
+      <div class="section-head"><div><p class="eyebrow">01 / THE SHOW</p><h2>The Infinite Quarter</h2><p>From a jukebox to the edge of the universe. The string always wins.</p></div><span class="section-tag">RETRO MICRO-ADVENTURES</span></div>
+      <div class="adventure-grid">
+        <div class="stage-panel">
+          <div class="stage-toolbar"><span class="live-dot"></span><span id="episode-label">EPISODE 001 · THE JUKEBOX HUSTLE</span><span>GEN.E-WRIST v∞</span></div>
+          <div class="stage-demo" id="stage-demo" data-device="jukebox">
+            <div class="stage-stars" aria-hidden="true"></div>
+            <div class="stage-caption" id="stage-caption">INSERT 1 REPO</div>
+            <div class="wrist" aria-hidden="true"><span class="wrist-screen">3·6·9</span><span class="wrist-hand"></span></div>
+            <div class="coin-string" aria-hidden="true"></div>
+            <img class="stage-quarter" src="./assets/lil-phi-guy.svg" alt="">
+            <div class="retro-device" id="retro-device" aria-hidden="true"><span class="device-top"></span><span class="device-screen">♫</span><span class="device-slot"></span><span class="device-base"></span></div>
+            <span class="stage-floor" aria-hidden="true"></span>
+          </div>
+          <div class="stage-controls">
+            <button class="button primary" id="play-scene" type="button">INSERT THE QUARTER <span aria-hidden="true">↗</span></button>
+            <span class="stage-status" id="stage-status" role="status" aria-live="polite">Choose an episode and start the gag.</span>
+          </div>
+          <label class="audio-label" for="track-input">Optional original music for this session <input id="track-input" type="file" accept="audio/*"></label>
+          <audio id="scene-audio" controls hidden></audio>
+          <p class="fine-print">Music stays on your device. No song is included or uploaded. Without a track, the scene uses a tiny original synthesized chime.</p>
+        </div>
+        <div class="episode-panel"><h3>Choose a scene</h3><p>Four lovingly ridiculous retro devices. The first playable prototypes are short visual gags, not finished films.</p><div id="episodes" class="episode-list"></div><div class="episode-script" id="episode-script" aria-live="polite"></div></div>
+      </div>
+    </section>
+
+    <section id="pieces" class="section wrap">
+      <div class="section-head"><div><p class="eyebrow">02 / THE GAME</p><h2>Pieces of Phi</h2><p>Imagine 3. Build 6. Share 9. Eighteen honest milestones forge one Lil' Phi Guy.</p></div><span class="section-tag">NOT CRYPTO · JUST CREATIVITY</span></div>
+      <div class="pieces-grid">
+        <div class="mint-panel">
+          <div class="mint-orb" id="mint-orb"><div class="mint-ring" id="mint-ring" role="img" aria-label="0 of 18 pieces collected"></div><img src="./assets/lil-phi-guy.svg" alt="Lil' Phi Guy coin"></div>
+          <p class="mint-number"><strong id="piece-count">0</strong><span>/18 pieces</span></p><p id="mint-message">A few sparks away from something wonderful.</p>
+          <div class="progress-track"><div id="progress-fill"></div></div>
+          <p class="fine-print center">One completed coin = one symbolic 1 REPO achievement. No real-world monetary value.</p>
+        </div>
+        <div class="milestones-panel">
+          <div class="project-fields"><label>Project name<input id="project-name" maxlength="100" placeholder="My impossible idea"></label><label>Repository or demo URL (optional)<input id="project-url" type="url" placeholder="https://github.com/you/project"></label></div>
+          <div id="milestones" class="milestones"></div>
+          <div class="milestone-footer"><p class="fine-print">Self-reported milestones stored only in this browser. Check them when the work is really done.</p><button class="text-button" id="reset-pieces" type="button">Start a new coin</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="content-lab" class="section wrap">
+      <div class="section-head"><div><p class="eyebrow">03 / THE STUDIO</p><h2>Φ Content Lab</h2><p>Make them laugh. Make them think. Show them something they didn't know was possible.</p></div><span class="section-tag">LOCAL-FIRST · HUMAN-APPROVED</span></div>
+      <div class="lab-grid">
+        <section class="lab-card" aria-labelledby="draft-heading"><h3 id="draft-heading">Post workshop</h3><p>Draft original content for your monetized personal profile. Review before publishing.</p>
+          <form id="draft-form">
+            <label>Post style<select name="style"><option value="humor">Relatable humor</option><option value="question">Curiosity &amp; debate</option><option value="build">Show what I built</option><option value="lesson">What I learned</option></select></label>
+            <label>Your actual topic or discovery<textarea name="topic" required rows="3" maxlength="900" placeholder="I built a coin that never stays in the jukebox..."></textarea></label>
+            <label>A genuine question for people (optional)<input name="question" maxlength="250" placeholder="What's the weirdest thing you'd build?"></label>
+            <label>Project link (optional)<input name="link" type="url" placeholder="https://github.com/..."></label>
+            <button class="button primary" type="submit">CREATE DRAFT</button>
+          </form>
+          <label for="draft-output">Your editable draft<textarea id="draft-output" rows="8" placeholder="Your draft will appear here."></textarea></label>
+          <div class="button-row"><button class="button secondary" id="copy-draft" type="button">Copy text</button><button class="button secondary" id="save-draft" type="button">Save to local queue</button></div>
+          <p id="draft-status" class="fine-print" role="status"></p><div id="draft-queue" class="local-list"></div>
+        </section>
+        <div class="lab-stack">
+          <section class="lab-card" aria-labelledby="group-heading"><h3 id="group-heading">Group field notes</h3><p>Research communities before sharing. Check current rules and contribute as a person, not a posting robot.</p>
+            <form id="group-form" class="compact-form">
+              <label>Group name<input name="name" required maxlength="120" placeholder="Friendly retro-computing group"></label>
+              <label>Facebook group link (optional)<input name="url" type="url" placeholder="https://www.facebook.com/groups/..."></label>
+              <label>What members care about<input name="fit" maxlength="220" placeholder="Retro computers, working demos, repair stories"></label>
+              <label class="checkrow"><input name="rulesChecked" type="checkbox"> I've reviewed the group's current sharing rules</label>
+              <button class="button secondary" type="submit">Save group note</button>
+            </form>
+            <div id="group-list" class="local-list"></div>
+          </section>
+          <section class="lab-card" aria-labelledby="timing-heading"><h3 id="timing-heading">Timing experiment log</h3><p>Test morning, midday and evening in Pacific Time. Record real results from Facebook Insights, never estimated reach.</p>
+            <form id="metric-form" class="compact-form">
+              <div class="two-fields"><label>Date<input name="date" id="metric-date" type="date" required></label><label>Slot<select name="slot"><option value="Morning">Morning · 8–10 AM PT</option><option value="Midday">Midday · 12–2 PM PT</option><option value="Evening">Evening · 6–9 PM PT</option></select></label></div>
+              <div class="two-fields"><label>Qualified views<input name="views" type="number" required min="0" step="1" placeholder="0"></label><label>Earnings (USD)<input name="earnings" type="number" required min="0" step="0.01" placeholder="0.00"></label></div>
+              <label>Post / topic note<input name="note" maxlength="180" placeholder="Funny quarter image"></label>
+              <button class="button secondary" type="submit">Log actual result</button>
+            </form>
+            <div id="metrics-results" class="local-list"></div>
+          </section>
+        </div>
+      </div>
+      <p class="privacy-note"><strong>How this works:</strong> Your notes, drafts, group research, and milestones live in this browser's local storage. Nothing is sent to Φ369 Labs. No automated Facebook group posting, scraping, engagement manipulation, or earnings guarantee. Back up important drafts elsewhere if clearing browser data.</p>
+    </section>
+  </main>
+  <footer class="footer"><div><strong>Φ369 LABS</strong><p>Peace Above Drama · Laughter Before Hatred · People Above Profit</p></div><a href="https://github.com/MichaelWave369/InfiniteTinkerer" target="_blank" rel="noopener noreferrer">Fork the ridiculousness ↗</a><span>MIT · OPEN SOURCE · FACE VALUE 1 REPO</span></footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
