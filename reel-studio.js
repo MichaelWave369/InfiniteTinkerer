@@ -152,7 +152,14 @@ function onReady(){
   EPISODES.forEach(e=>{const opt=document.createElement('option');opt.value=e.id;opt.textContent=e.number+' · '+e.title;select.append(opt)});
   let coinImage=new Image(),customImageUrl=null,audioFileUrl=null,busy=false,frameHandle=null,previousCue='',playingAudio=null;
   coinImage.onload=()=>{if(!busy)renderFrame(ctx,0,select.value,coinImage)};
-  coinImage.src='./assets/lil-phi-guy.svg';
+  coinImage.src=window.getSelectedPhiCoinArtwork?.()||'./assets/lil-phi-guy.svg';
+  window.addEventListener('phi-coin-selected',event=>{
+    const src=event.detail?.src;
+    if(typeof src!=='string'||busy)return;
+    const newImage=new Image();
+    newImage.onload=()=>{coinImage=newImage;renderFrame(ctx,0,select.value,coinImage);setMessage('Coin Vault artwork loaded in the Reel Studio.')};
+    newImage.src=src;
+  });
   renderFrame(ctx,0,select.value,coinImage);
   select.addEventListener('change',()=>{if(!busy)renderFrame(ctx,0,select.value,coinImage)});
   art.addEventListener('change',()=>{
@@ -235,7 +242,7 @@ function onReady(){
   preview.addEventListener('click',()=>play(false));
   exportButton.addEventListener('click',()=>play(true));
   document.getElementById('reel-reset').addEventListener('click',()=>{
-    if(busy)return;art.value='';if(customImageUrl)URL.revokeObjectURL(customImageUrl);customImageUrl=null;coinImage=new Image();coinImage.onload=()=>renderFrame(ctx,0,select.value,coinImage);coinImage.src='./assets/lil-phi-guy.svg';setMessage('Default Lil’ Phi Guy coin restored.')
+    if(busy)return;art.value='';if(customImageUrl)URL.revokeObjectURL(customImageUrl);customImageUrl=null;coinImage=new Image();coinImage.onload=()=>renderFrame(ctx,0,select.value,coinImage);coinImage.src=window.getSelectedPhiCoinArtwork?.()||'./assets/lil-phi-guy.svg';setMessage('Reverted to the coin selected in your Coin Vault.')
   });
 }
 if(typeof document!=='undefined'){if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',onReady);else onReady()}

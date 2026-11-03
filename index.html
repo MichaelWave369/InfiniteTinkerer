@@ -15,7 +15,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="#top"><img src="./assets/lil-phi-guy.svg" alt="" width="42" height="42"><span><strong>INFINITE<span class="gold">TINKERER</span></strong><small>Φ369 LABS · ENTER THE FIELD</small></span></a>
-    <nav aria-label="Main navigation"><a href="#adventures">Adventures</a><a href="#reel-studio">Reel Studio</a><a href="#pieces">Pieces of Phi</a><a href="#content-lab">Content Lab</a></nav>
+    <nav aria-label="Main navigation"><a href="#adventures">Adventures</a><a href="#reel-studio">Reel Studio</a><a href="#coin-vault">Coin Vault</a><a href="#pieces">Pieces of Phi</a><a href="#content-lab">Content Lab</a></nav>
   </header>
   <main id="main">
     <section id="top" class="hero">
@@ -82,6 +82,22 @@
         </div>
       </div>
     </section>
+    <section id="coin-vault" class="section wrap">
+      <div class="section-head"><div><p class="eyebrow">01C / THE MINT</p><h2>Lil' Phi Guy Coin Vault</h2><p>Give the little troublemaker his actual face. Import the two portrait medallions once, switch whenever you want, and use them across the site.</p></div><span class="section-tag">YOUR ART · YOUR BROWSER</span></div>
+      <div class="vault-grid">
+        <div class="vault-preview"><img src="./assets/lil-phi-guy.svg" alt="Original Phi369 Labs vector coin" class="hero-coin"><p>Face value: 1 REPO</p></div>
+        <div class="vault-panel">
+          <h3>Choose the coin</h3><p>One for the classic jukebox quarter, one for the Fibonacci robot medallion. The default icon stays available.</p>
+          <label for="coin-vault-selector">Active coin<select id="coin-vault-selector"><option value="default">Original Φ369 vector</option><option value="classic">Classic portrait coin</option><option value="fibonacci">Fibonacci / robots portrait coin</option></select></label>
+          <label for="coin-vault-classic">Import classic portrait medallion<input id="coin-vault-classic" type="file" accept="image/png,image/jpeg,image/webp"></label>
+          <label for="coin-vault-fibonacci">Import Fibonacci robot medallion<input id="coin-vault-fibonacci" type="file" accept="image/png,image/jpeg,image/webp"></label>
+          <button id="coin-vault-reset" class="button secondary" type="button">Clear locally stored portraits</button>
+          <p id="coin-vault-status" role="status" aria-live="polite" class="reel-status"></p>
+          <p class="fine-print">Images are resized to 720×720 and saved only in this browser. They are not uploaded, synced across devices, or committed to GitHub. Export a Content Lab backup to preserve them.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="pieces" class="section wrap">
       <div class="section-head"><div><p class="eyebrow">02 / THE GAME</p><h2>Pieces of Phi</h2><p>Imagine 3. Build 6. Share 9. Eighteen honest milestones forge one Lil' Phi Guy.</p></div><span class="section-tag">NOT CRYPTO · JUST CREATIVITY</span></div>
       <div class="pieces-grid">
@@ -136,11 +152,26 @@
           </section>
         </div>
       </div>
+      <div class="lab-backup-panel">
+        <div>
+          <h3>Take your research with you</h3>
+          <p>Back up your real numbers, group notes, drafts, Pieces of Phi and locally installed coin art. Nothing is sent anywhere.</p>
+          <div id="time-insights" aria-live="polite"></div>
+        </div>
+        <div class="backup-actions">
+          <button id="export-lab-backup" class="button primary" type="button">↓ Download complete backup</button>
+          <button id="export-lab-csv" class="button secondary" type="button">↓ Download earnings CSV</button>
+          <label for="import-lab-backup">Restore a previous private backup<input id="import-lab-backup" type="file" accept="application/json,.json"></label>
+          <p id="lab-backup-status" class="fine-print" role="status" aria-live="polite">Download a backup before clearing browser data or changing computers.</p>
+        </div>
+      </div>
       <p class="privacy-note"><strong>How this works:</strong> Your notes, drafts, group research, and milestones live in this browser's local storage. Nothing is sent to Φ369 Labs. No automated Facebook group posting, scraping, engagement manipulation, or earnings guarantee. Back up important drafts elsewhere if clearing browser data.</p>
     </section>
   </main>
   <footer class="footer"><div><strong>Φ369 LABS</strong><p>Peace Above Drama · Laughter Before Hatred · People Above Profit</p></div><a href="https://github.com/MichaelWave369/InfiniteTinkerer" target="_blank" rel="noopener noreferrer">Fork the ridiculousness ↗</a><span>MIT · OPEN SOURCE · FACE VALUE 1 REPO</span></footer>
   <script type="module" src="./app.js"></script>
   <script type="module" src="./reel-studio.js"></script>
+  <script type="module" src="./coin-vault.js"></script>
+  <script type="module" src="./content-lab-plus.js"></script>
 </body>
 </html>
