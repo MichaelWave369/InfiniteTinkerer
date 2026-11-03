@@ -1,0 +1,13 @@
+{
+  "name": "infinite-tinkerer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Lil' Phi Guy, Pieces of Phi, and the Φ369 Content Lab",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check app.js && npm test"
+  },
+  "license": "MIT",
+  "engines": {"node": ">=20"}
+}
