@@ -13,7 +13,7 @@ export const STAGES = Object.freeze([
 export const MILESTONES = Object.freeze(STAGES.flatMap(stage=>stage.items));
 export const STORAGE_KEY = 'phi369.infiniteTinkerer.rung001';
 export const clamp = (value,min,max) => Math.max(min,Math.min(max,Number(value)||0));
-export function completionCount(done){return Array.isArray(done)?done.filter(Boolean).slice(0,18).length:0}
+export function completionCount(done){return Array.isArray(done)?done.slice(0,18).filter(v=>v===true).length:0}
 export function earningsRate(earnings,views){const e=Number(earnings),v=Number(views);return Number.isFinite(e)&&Number.isFinite(v)&&e>=0&&v>0?(e/v)*1000:null}
 export function escapeHTML(input){return String(input??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
 export function safeUrl(raw){try{const u=new URL(String(raw));return ['http:','https:'].includes(u.protocol)?u.href:null}catch{return null}}
