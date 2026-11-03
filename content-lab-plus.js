@@ -64,7 +64,7 @@ function saveFile(text,filename,type){
  a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();
  setTimeout(()=>URL.revokeObjectURL(url),15000);
 }
-function csvField(value){return '"'+String(value??'').replace(/"/g,'""')+'"'}
+function csvField(value){let cell=String(value??'');if(/^[\s]*[=+@\-]/.test(cell))cell="'"+cell;return '"'+cell.replace(/"/g,'""')+'"'}
 export function metricsCsv(logs){
  const rows=['"date","slot","qualified_views","earnings_usd","note"'];
  for(const log of cleanState({logs}).logs)rows.push(
